@@ -27,7 +27,7 @@ console.log('script . js consoled');
 }) */
 
 
-const weatherForm = document.querySelector('form');
+const weatherForm = document.querySelector('form') ;
 const search = document.querySelector('input');
 
 
