@@ -4,6 +4,7 @@ const app = express();
 const hbs = require('hbs');
 const { query } = require('express');
 
+const port = process.env.PORT || 3000;
 
 // console.log(__dirname);
 // console.log(__filename);   
@@ -152,6 +153,6 @@ app.get("*", (req, res)=> {                                       //  * sab kuch
     });                                        
 })
 
-app.listen(3000 , () => {
-    console.log('server on 3000 port started'); 
+app.listen(port , () => {
+    console.log('server started on Port no' + port);  
 }) 
