@@ -155,4 +155,4 @@ app.get("*", (req, res)=> {                                       //  * sab kuch
 
 app.listen(port , () => {
     console.log('server started on Port no' + port);  
-}) 
+})  
