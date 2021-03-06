@@ -112,13 +112,13 @@ app.get("/weather", (req, res)=> {
             
             console.log('Correct Details.. Printing Details in Browser');
            // console.log("With chaining location details : ",location);    
-            const{weather_descriptions, temperature, feelslike, country ,region} = forecastdata;  
+            const{weather_descriptions, temperature, feelslike, country ,region ,humidity , pressure ,localtime , lat , lon} = forecastdata;  
            // console.log(`With chaining ... Weather here in ${region}(${country}) is ${weather_descriptions}. Temp is ${temperature}, but it feels like ${feelslike}`); 
             res.send({
-                forecastStatement : `Weather here in ${region}(${country}) is ${weather_descriptions}. Temp is ${temperature}, but it feels like ${feelslike}`,
-                forecast : forecastdata,
+                forecastStatement : `Weather here in ${region} (${country}) is ${weather_descriptions}. Temp is ${temperature} F, but it feels like ${feelslike} F. Humidity is ${humidity} % and Pressure is ${pressure} Pascal. Current local time is ${localtime}. Latitude is ${lat} and Longtitude is ${lon}.`, 
+                forecast : forecastdata, 
                 location : location,
-                address : req.query.address
+                address : req.query.address 
 
             })        
         })

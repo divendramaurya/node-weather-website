@@ -21,7 +21,12 @@ const fnforecast = (lattitude, longtitude ,callback) => {
                     temperature : body.current.temperature,
                     feelslike : body.current.feelslike,
                     country : body.location.country, 
-                    region : body.location.region,    
+                    region : body.location.region,  
+                    humidity :  body.current.humidity,
+                    localtime :body.location.localtime,   
+                    pressure : body.current.pressure,
+                    lat :body.location.lat,
+                    lon :body.location.lon,
                 }
              )
         }  
